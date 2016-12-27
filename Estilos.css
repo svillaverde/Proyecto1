@@ -1,0 +1,1675 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0;
+	padding:0;
+}
+	.ico{
+		border-radius:15px;
+	}
+	.dVisible{
+	    visibility: hidden;
+	    position:absolute;
+	}
+	.dParams {
+		display:none;
+	}
+	.btnDTS {
+		background: #50C0D7;
+		color: #FFF;
+		text-decoration: none;
+		text-shadow: 0 1px 1px #333;
+		border: 1px solid #ccc;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255, .3), inset 0 0 0 1px rgba(255,255,255, .6), 0 1px 2px rgba(0, 0, 0, .1);
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255, .3), inset 0 0 0 1px rgba(255,255,255, .6), 0 1px 2px rgba(0, 0, 0, .1);
+		box-shadow: inset 0 1px 0 rgba(255,255,255, .3), inset 0 0 0 1px rgba(255,255,255, .6), 0 1px 2px rgba(0, 0, 0, .1);
+		cursor: pointer;
+		font-size: 13px;
+		font-weight: bold;
+		vertical-align: middle;
+		background-repeat: no-repeat, repeat;
+		background-position: 8px 7px, 0px 0px;
+		padding-left: 10px;
+		padding-right: 10px;
+		background-size: 15px 15px, auto;
+    }
+	.btnDTS:hover{
+    	border-color:#50C0D7; /* Modificamos el color del borde */ 
+    	background-color:#FFF;/* Cambiamos los colores del fondo degradado */
+		color:#50C0D7;
+		text-shadow: 0 1px 1px #FFF;
+    	/* Modificamos las propiedades del Box Shadow para un efecto Glow */
+    	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, .3), inset 0 0 0 1px rgba(255,255,255, .6), 0 1px 6px rgba(36, 168, 229, .3);
+    	-moz-box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+	    box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+	}
+	.select{
+
+    background-image: url(../img/imgdrop.png);
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    background-position: 15.5em 0.46em, 0px 0px;
+    background-size: 1em 1em, auto;
+
+    }
+    .cancelar{
+    margin-left:1.2em;
+    }
+    .aceptar{
+    margin-right:1.2em;
+    }
+
+    .ico1{
+    border-radius:25px;
+    }
+    .dAnadir{
+    position:fixed;
+    bottom:12.5%;
+    right:5.5%;
+    }
+    .dBorrar{
+    position:fixed;
+    bottom:12.5%;
+    left:5.5%;
+    }
+    .dMensaje{
+
+        position:fixed;
+        background: -webkit-linear-gradient(#50C0D7, #24A3C8);
+        background: -moz-linear-gradient(#50C0D7, #24A3C8);
+        background: -ms-linear-gradient(#50C0D7, #24A3C8);
+        background: -o-linear-gradient(#50C0D7, #24A3C8);
+        background: linear-gradient(#50C0D7, #24A3C8);
+        right:2.5%;
+        left:2.5%;
+        bottom:2.5%;
+        height:3em;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        z-index:98;
+    }
+    .dMensajeSub{
+        padding-top:0.2em;
+        padding-left:0.5em;
+
+    }
+    .dFondoMensaje{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background: rgba(64,64,64,.85);
+        visibility:hidden;
+    }
+    .dContentMensaje{
+        position:fixed;
+        top:20%;
+        bottom:20%;
+        left:7%;
+        right:7%;
+        background: #FFFFFF;
+        border-radius:10px;
+    }
+    .dDetMensaje{
+        position:absolute;
+        left:0;
+        right:0;
+        top:2.35em;
+        bottom:0;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .dTitMensaje{
+        position:relative;
+        left:0;
+        right:0;
+        background: -webkit-linear-gradient(#50C0D7, #24A3C8);
+        background: -moz-linear-gradient(#50C0D7, #24A3C8);
+        background: -ms-linear-gradient(#50C0D7, #24A3C8);
+        background: -o-linear-gradient(#50C0D7, #24A3C8);
+        background: linear-gradient(#50C0D7, #24A3C8);
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        height:2.1em;
+        box-shadow:0px 2px 1px #BFBFBF;
+    }
+    .aIco{
+        margin-top:0.16em;
+        margin-right:0.16em;
+    }
+    .tbMensajeDetalle{
+        width:100%;
+    }
+    .tbMensajeDetalle tr td{
+        border-bottom: 1px solid #bfbfbf;
+    }
+	/************ Pagina de Login *************/
+	.dFondo{
+		width:100%;
+		height:31.4em;
+		padding-top:2em;
+		background-image: url(../img/imgbackground.png);
+	    background-repeat: no-repeat;
+    	background-size: 327%;
+	    background-attachment: fixed;
+		/*background:#2090F8;*/
+	}
+	.dTitulo{
+		padding-top:0.5em;
+		padding-bottom:0.55em;
+		padding-left:0.7em;
+		padding-right:0.7em;
+		position:fixed;
+		left:1.3em;
+		right:1.3em;
+		background:rgba(255,255,255, .9);
+		border:1px solid rgba(255,255,255, .9);
+		-webkit-border-radius:6px;
+		-moz-border-radius:6px;
+		-ms-border-radius:6px;
+		-o-border-radius:6px;
+		border-radius:7px;	
+	}
+	.tbTitulo{
+		width:100%;
+	}
+	.td-titulo{
+		font-family:Arial;
+		width:50%;
+		color: #0d0d0d;
+	    font-size: 1.3em;
+	}
+
+	.bodyLogin {
+		background:rgba(255,255,255, .9);
+		width:15.8em;
+		border:1px solid rgba(255,255,255, .9);
+		-webkit-border-radius:6px;
+		-moz-border-radius:6px;
+		-ms-border-radius:6px;
+		-o-border-radius:6px;
+		border-radius:7px;
+		padding-top:0.5em;
+		padding-left:0.1em;
+		padding-bottom:1.1em;
+	}
+	.tbLogin tr td{
+		padding-top:0.35em;
+	}
+	.txtUser, .txtPass{
+		width:17em;
+		padding:8px 10px 8px 10px !important;
+		text-align:center;	
+	}
+	.txtUser::-webkit-input-placeholder {
+		text-align:center;
+	}
+	.txtUser:-moz-placeholder {
+		text-align:center; 
+	}
+	.txtUser:-ms-input-placeholder { 
+	 	text-align:center;
+	}
+	.txtPass::-webkit-input-placeholder {
+		text-align:center;
+	}
+	.txtPass:-moz-placeholder {
+		text-align:center; 
+	}
+	.txtPass:-ms-input-placeholder { 
+	 	text-align:center;
+	}
+	.lblLogin{
+		font-size:0.84em;
+		font-family:Arial;
+	}
+	.lblMensaje{
+	    color:#FFFFFF;
+	    font-family:Arial;
+	}
+	.txta {
+		padding:5px 10px 5px 10px;
+		box-sizing: border-box;
+		background-color:#fff;
+		border:1px solid #ccc;
+		-webkit-border-radius:4px;
+		-moz-border-radius:4px;
+		-ms-border-radius:4px;
+		-o-border-radius:4px;
+		border-radius:4px;
+		-webkit-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		-moz-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		-ms-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		-o-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		font-size:12px;
+		color:#000;    
+	}
+	.txta:focus{
+    	border-color:#66afe9;
+    	outline:0;
+    	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, .3), inset 0 0 0 1px rgba(255,255,255, .6), 0 1px 6px rgba(36, 168, 229, .3);
+        -moz-box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+        -ms-box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+    	-o-box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+    	box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+    }
+	.btnLogin{
+		background: #50C0D7;
+		color: #FFF;
+		text-decoration: none;
+		text-shadow: 0 1px 1px #333;
+		border: 1px solid #50C0D7;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		border-radius: 4px;
+		cursor: pointer;
+		font-size: 13px;
+		font-weight: bold;
+		vertical-align: middle;
+		text-align:center;
+		white-space: normal;
+    }
+	.btnLogin:hover{
+    	border-color:#50C0D7; /* Modificamos el color del borde */ 
+    	background-color:#FFF;/* Cambiamos los colores del fondo degradado */
+		color:#50C0D7;
+		text-shadow: 0 1px 1px #FFF;
+    	/* Modificamos las propiedades del Box Shadow para un efecto Glow */
+    	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, .3), inset 0 0 0 1px rgba(255,255,255, .6), 0 1px 6px rgba(36, 168, 229, .3);
+    	-moz-box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+	    box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+	}
+	.btnIngresar{
+		height:2.5em;
+		width:15.7em;
+	}
+	
+	/************ \Pagina de Login *************/
+	/************ Pagina de Menu *************/
+	
+	.dFondo1{
+		position:fixed;
+		padding-top:2em;
+		background-image: url(../img/imgbackground2.png);
+	    background-repeat: no-repeat;
+    	background-size: 340%;
+	    background-attachment: fixed;
+		top:0;
+		bottom:0;
+		right:0;
+		left:0;
+		/*background:#2090F8;*/
+	}
+	
+	.btnMenu {
+		background: rgba(255,255,255, .93);
+		color: #50C0D7;
+		text-decoration: none;
+		text-shadow: 0 1px 1px #FFF;
+		border:1px solid #FFF;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		border-radius: 4px; 
+		cursor: pointer;
+		font-size: 13px;
+		font-weight: bold;
+		vertical-align: middle;
+		background-repeat: no-repeat, repeat;
+		background-position: 3.48em 2.5em, 0px 0px;
+		padding-top: 4.5em;
+		background-size: 32px 32px, auto;
+		white-space: normal;
+    }
+	/*.btnMenu:hover{
+    	border-color:#FFF; /* Modificamos el color del borde */
+	/*	-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		-ms-border-radius: 4px;
+		-o-border-radius: 4px;
+		border-radius: 4px; 
+    	background-color:rgba(255,255,255, .0);/* Cambiamos los colores del fondo degradado */
+	/*	color:#FFF;
+		text-shadow: 0 1px 1px #333;
+    	/* Modificamos las propiedades del Box Shadow para un efecto Glow */
+    /*	-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255, .3), inset 0 0 0 1px rgba(255,255,255, .6), 0 1px 6px rgba(36, 168, 229, .3);
+    	-moz-box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+	    box-shadow:inset 0 1px 0 rgba(251,247,193, .3), inset 0 0 0 1px rgba(251,247,193, .3), 0 1px 6px rgba(36, 168, 229, .3);
+	}*/
+	.btn-ico-ingresar {
+		background-image: url(../img/icoingresohover.png);
+	}
+	.btn-ico-ingresar:hover {
+		background-image: url(../img/icoingreso.png);
+	}
+	.btn-ico-eliminar {
+        background-image: url(../img/icoeliminarhover.png);
+    }
+    .btn-ico-eliminar:hover {
+        background-image: url(../img/icoeliminar.png);
+    }
+	.btn-ico-recepcion {
+		background-image: url(../img/icoresepcion.png);
+	}
+	/*
+	.btn-ico-recepcion:hover {
+		background-image: url(../img/icoresepcionhover.png);
+	}
+	*/
+	.btn-ico-almacenamiento {
+		background-image: url(../img/icoalmacen.png);
+	}
+	/*
+	.btn-ico-almacenamiento:hover {
+		background-image: url(../img/icoalmacenhover.png);
+	}
+	*/
+	.btn-ico-despacho {
+		background-image: url(../img/icodespacho.png);
+	}
+	/*
+	.btn-ico-despacho:hover {
+		background-image: url(../img/icodespachohover.png);
+	}
+	*/
+	.btn-ico-tomainventario {
+		background-image: url(../img/icotomainventario.png);
+	}
+	/*
+	.btn-ico-tomainventario:hover {
+		background-image: url(../img/icotomainventariohover.png);
+	}
+	*/
+	.btn-ico-recepcioncompras {
+		background-image: url(../img/icorecepcioncompras.png);
+	}
+	/*
+	.btn-ico-recepcioncompras:hover {
+		background-image: url(../img/icorecepcioncomprashover.png);
+	}
+	*/
+	.btn-ico-devoluciones {
+		background-image: url(../img/icodevoluciones.png);
+	}
+	/*
+	.btn-ico-devoluciones:hover {
+		background-image: url(../img/icodevolucioneshover.png);
+	}
+	*/
+	.btn-ico-trasladoalmacen {
+		background-image: url(../img/icotrasladoalmacen.png);
+	}
+	/*
+	.btn-ico-trasladoalmacen:hover {
+		background-image: url(../img/icotrasladoalmacenhover.png);
+	}
+	*/
+	.btn-ico-trasladoubicaciones {
+		background-image: url(../img/icotrasladoubicacion.png);
+	}
+	/*
+	.btn-ico-trasladoubicaciones:hover {
+		background-image: url(../img/icotrasladoubicacionhover.png);
+	}
+	*/
+	.btn-ico-gestionhu {
+		background-image: url(../img/icogestionhu.png);
+	}
+	/*
+	.btn-ico-gestionhu:hover {
+		background-image: url(../img/icogestionhuhover.png);
+	}
+	*/
+	.btn-ico-creacionhu {
+		background-image: url(../img/icocreacionhu.png);
+	}
+	/*
+	.btn-ico-creacionhu:hover {
+		background-image: url(../img/icocreacionhuhover.png);
+	}
+	*/
+	.btn-ico-visualizar {
+		background-image: url(../img/icovisualizar.png);
+	}
+	/*
+	.btn-ico-visualizar:hover {
+		background-image: url(../img/icovisualizarhover.png);
+	}
+	*/
+	.btn-ico-fraccionamientohu {
+		background-image: url(../img/icofraccionamientohu.png);
+	}
+	/*
+	.btn-ico-fraccionamientohu:hover {
+		background-image: url(../img/icofraccionamientohuhover.png);
+	}
+	*/
+	.btn-ico-despachoventas {
+		background-image: url(../img/icodespachoventa.png);
+	}
+	/*
+	.btn-ico-despachoventas:hover {
+		background-image: url(../img/icodespachoventahover.png);
+	}
+	*/
+	.btn-ico-despachotraslado {
+		background-image: url(../img/icodespachotraslado.png);
+	}
+	/*
+	.btn-ico-despachotraslado:hover {
+		background-image: url(../img/icodespachotrasladohover.png);
+	}
+	*/
+	.btn-ico-despachoreserva {
+		background-image: url(../img/icodespachoreserva.png);
+	}
+	/*
+	.btn-ico-despachoreserva:hover {
+		background-image: url(../img/icodespachoreservahover.png);
+	}
+	*/
+	.btn-ico-conteo {
+		background-image: url(../img/icoconteo.png);
+	}
+	/*
+	.btn-ico-conteo:hover {
+		background-image: url(../img/icoconteohover.png);
+	}
+	*/
+	.btn-ico-reconteo {
+		background-image: url(../img/icoreconteo.png);
+	}
+	/*
+	.btn-ico-reconteo:hover {
+		background-image: url(../img/icoreconteohover.png);
+	}
+	*/
+	.btn-ico-palletacon {
+    	background-image: url(../img/icopalletscon.png);
+    }
+    /*
+    .btn-ico-palletacon:hover {
+    	background-image: url(../img/icopalletsconhover.png);
+    }
+    */
+    .btn-ico-palletasin {
+    	background-image: url(../img/icopalletssin.png);
+    }
+    /*
+    .btn-ico-palletasin:hover {
+    	background-image: url(../img/icopalletssinhover.png);
+    }
+    */
+    .btn-ico-trasalmacen {
+        background-image: url(../img/icotrasalmacen.png);
+    }
+    /*
+    .btn-ico-trasalmacen:hover {
+        background-image: url(../img/icotrasalmacenhover.png);
+    }
+    */
+    .btn-ico-centro {
+    	background-image: url(../img/icocentro.png);
+    }
+    /*
+    .btn-ico-centro:hover {
+    	background-image: url(../img/icocentrohover.png);
+    }
+    */
+    .btn-ico-liberacion {
+    	background-image: url(../img/icoliberar.png);
+    }
+    /*
+    .btn-ico-liberacion:hover {
+    	background-image: url(../img/icoliberarhover.png);
+    }
+    */
+	.btnRecepcionIr, .btnAlmacenamientoIr, .btnDespachoIr, .btnTomadeInventarioIr, 
+	.btnRecepcionComprasIr, .btnTrasladosIr, .btnDevolucionesIr, .btnProduccionIr,
+	.btnTrasladoAlmacenIr, .btnTrasladoUbicacionIr, .btnLiberacionIr, .btnGestionIr, .btnVolverAL,
+	.btnCreacionHUIr, .btnVisualizacionIr, .btnFraccHUIr, .btnVolverGHU,
+	.btnDespachoVentaIr, .btnDespachoTrasladoIr, .btnDespachoReservaIr, .btnVolverDE,
+	.btnConPaletaIr, .btnSinPaletaIr {
+		height:9.7em;
+		width:9.62em;
+	}
+	.imgvolver{
+		padding-top:1.4em;
+		padding-bottom:1.4em;
+		padding-left:0.8em;
+	}
+	.imgopciones{
+		padding-top:1.4em;
+		padding-bottom:1.4em;
+		padding-right:0.8em;
+	}
+	.volver{
+		height:33.5px;
+	}
+	.bodyMenu{
+		padding-top:4.25em;
+		width:100%;
+	}
+	.dMenu{
+		position:absolute;
+		visibility:visible;
+	}
+	.dMenu table{
+		position:fixed;
+		width:94%;
+		left:3%;
+		right:3%;
+		height:70%;
+	}
+	.menuRecepcion{
+		position:absolute;
+		visibility:hidden;	
+	}
+	.menuRecepcion table{
+		position:fixed;
+		width:94%;
+		left:3%;
+		right:3%;
+		height:70%;
+	}
+	.menuAlmacenamiento{
+		position:absolute;
+		visibility:hidden;
+		/*width:94%;
+		height:400px;
+		overflow-y: scroll;
+        overflow-x: hidden;*/
+	}
+	.menuAlmacenamiento table{
+		position:fixed;
+		width:94%;
+		left:3%;
+		right:3%;
+		height:70%;
+	}
+	.menuAlmaGesHU{
+		position:absolute;
+		visibility:hidden;
+	}
+	.menuAlmaGesHU table{
+		position:fixed;
+		width:94%;
+		left:3%;
+		right:3%;
+		height:70%;
+	}
+	.menuDespacho{
+		position:absolute;
+		visibility:hidden;
+	}
+	.menuDespacho table{
+		position:fixed;
+		width:94%;
+		left:3%;
+		right:3%;
+		height:70%;
+	}
+	.menuTraslados{
+		position:absolute;
+		visibility:hidden;
+	}
+	.menuTraslados table{
+		position:fixed;
+		width:94%;
+		left:3%;
+		right:3%;
+		height:70%;
+	}
+	.dLogin{
+        visibility:visible;
+        position:absolute;
+        width:100%;
+        padding-top:6.8em;
+    }
+    .dLogin > table{
+        width:100%;
+    }
+	.dAdministrar{
+        visibility:hidden;
+        position:absolute;
+        width:100%;
+        padding-top:6.8em;
+    }
+    .dAdministrar > table{
+        width:100%;
+    }
+    .dCargando{
+        visibility:hidden;
+        position:fixed;
+        z-index:99;
+        top:0;
+        /*bottom:-100%;*/
+        height:100%;
+        left:0;
+        right:0;
+        background-color:#61cfdf;
+        /*background-image: url(../img/icocargando.gif) !important;
+        background-repeat: no-repeat;
+        background-size: 10.8em;
+        background-attachment: fixed;
+        background-position: 50% 46%;*/
+        transition:0.3s ease-in-out;
+    }
+    .imgCargando{
+        position:absolute;
+        top:44%;
+        left:17.25%;
+        width:13em;
+    }
+	
+		/****Menu Principal***/
+		
+		.btnRecepcionIr{
+			/*margin-left:2.15em;*/
+			margin-top:0em;
+		}	
+		.btnAlmacenamientoIr{
+			/*margin-left:0.7em;*/
+			margin-top:0em;	
+		}
+		.btnDespachoIr{
+			/*margin-left:2.15em;*/
+			margin-top:1.3em;
+		}
+		.btnTomadeInventarioIr{
+			/*margin-left:0.7em;*/
+			margin-top:1.3em;	
+		}
+		
+		/****\Menu Principal ***/	
+		/****Menu Recepcion***/
+		
+		.btnRecepcionComprasIr{
+			/*margin-left:7.3em;*/
+			margin-top:0em;
+		}
+		.btnDevolucionesIr{
+			/*margin-left:7.3em;*/
+			margin-top:1.3em;
+		}
+		
+		/****\Menu Recepcion***/
+		/****Menu Almacenamiento***/
+
+		.btnLiberacionIr{
+			/*margin-left:2.15em;*/
+			margin-top:0em;
+		}
+		.btnTrasladoAlmacenIr{
+			/*margin-left:0.7em;*/
+			margin-top:0em;
+		}
+		.btnTrasladoUbicacionIr{
+            /*margin-left:2.15em;*/
+        	margin-top:1.3em;
+        }
+		.btnGestionIr{
+			/*margin-left:2.15em;*/
+			margin-top:1.3em;
+		}
+		/****\Menu Almacenamiento***/
+		/****Menu Almacenamiento - Gestión HU***/
+		
+		.btnCreacionHUIr{
+			/*margin-left:2.15em;*/
+			margin-top:0em;
+		}
+		.btnVisualizacionIr{
+			/*margin-left:0.7em;*/
+			margin-top:0em;
+		}
+		.btnFraccHUIr{
+			/*margin-left:2.15em;*/
+			margin-top:1.3em;
+		}
+		/****\Menu Almacenamiento***/
+		/****Menu Despacho***/
+		
+		.btnDespachoVentaIr{
+			/*margin-left:2.15em;*/
+			margin-top:0em;
+		}
+		.btnDespachoTrasladoIr{
+			/*margin-left:0.7em;*/
+			margin-top:1.3em;
+		}
+		.btnDespachoReservaIr{
+			/*margin-left:2.15em;*/
+			margin-top:1.3em;
+		}
+		/****\Menu Despacho***/
+		/****Menu Toma de Inventario***/
+		
+		.btnConPaletaIr{
+			/*margin-left:7.3em;*/
+			margin-top:0em;
+		}
+		.btnSinPaletaIr{
+			/*margin-left:7.3em;*/
+			margin-top:1.3em;
+		}
+		/****\Menu Toma de Inventario***/
+		
+	/************ \Pagina de Menu *************/			
+	/************ Pagina de Recepción *************/
+	
+		/************ Pagina de Recepción de Compras *************/
+		.dFondo2{
+			position:fixed;
+			background-image: url(../img/imgbackground2.png);
+			background-repeat: no-repeat;
+			background-size: 340%;
+		    background-attachment: fixed;
+			top:0;
+			bottom:0;
+			right:0;
+			left:0;
+			/*background:#2090F8;*/
+			padding-top:0.6em;
+			padding-left:0.37em;
+		}
+		.dContent{
+			background:#FFF !important;
+			position:fixed;
+			border:1px solid #FFF;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			-ms-border-radius: 4px;
+			-o-border-radius: 4px;
+			border-radius: 4px;
+			left:2.5%;
+			right:2.5%;
+			top:2.5%;
+			bottom:2.5%; 
+		}
+		.dVolver{
+			width:97.5%;
+			padding-top:0.85em;
+		}
+		.dTitRecepComp{
+			width:100%;
+			height:3.1em;
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+			background: -webkit-linear-gradient(#50C0D7, #24A3C8);
+			background: -moz-linear-gradient(#50C0D7, #24A3C8);
+			background: -ms-linear-gradient(#50C0D7, #24A3C8);
+			background: -o-linear-gradient(#50C0D7, #24A3C8);
+			background: linear-gradient(#50C0D7, #24A3C8);
+			text-align:center;
+			box-shadow:2px 2px 5px #BFBFBF;
+			z-index:2;
+		}
+		.dTitRecepComp > table {
+			padding-top:0.55em;
+		}
+		.dParams {
+			display:none;
+		}
+		.dFil1 {
+			height:5.79em;
+			width:100% !important;
+			border-bottom:1px solid #BFBFBF;
+		}
+		.lblTit{
+			color:#ffffff;
+			font-family:Arial;
+			font-size:1.15em;
+			width:50%;
+			height:1em;
+		}
+		.dFirst {
+			position:absolute;
+			width:100%;
+			visibility:visible;
+		}
+		.dSecond {
+			width:100%;
+			position:absolute;
+			visibility:hidden;
+		}
+		.dThird{
+		    width:100%;
+            position:absolute;
+            visibility:hidden;
+		}
+        .dHerra0{
+		    width:8.43em;
+            height:7.09em;
+		}
+		.dHerra1{
+             width:8.43em;
+             height:3.00em;
+        		}
+        .dHerra2{
+		    width:11.38em;
+            height:4.6em;
+            right:5% !important;
+		}
+        .dHerra3{
+		    width:8.43em;
+            height:2.9em;
+		}
+		.dTools{
+			visibility:hidden;
+			position:fixed;
+            right:4%;
+			margin-top:0.3em;
+			background:#FFF;
+			border-radius:4px;
+			border:0.1em solid #BFBFBF;
+			box-shadow:3px 3px 3px #BFBFBF;
+		}
+		.dTools table{
+			border-spacing: 0;
+			border: none;
+			padding-top:0.38em;
+			padding-bottom:0.38em;
+		}
+		.dTools tr:hover{
+			background:#E8E8E8;
+		}
+		.dTools tr td{
+			border: none;
+			padding-top:0.4em;
+			padding-bottom:0.4em;
+		}
+		.dTools tr td:first-child{
+			padding-left:0.7em;
+		}
+		.tdItem{
+			padding-left:0.6em;	
+		}
+		.tbCampos{
+			padding-top:0.3em;
+			width:95.4%;
+		}
+		.txtDat2{
+			width:11.6em;
+		}
+		.txtDat6{
+			width:16em;
+		}
+		.txtPedidoRC{
+		    width:11.5em;
+		}
+		.txtCentroRC{
+		    width:18.5em;
+		}
+		.txtAlmacenRC{
+		    width:18.5em;
+		}
+		.lblPedido1, .lblCentro, .lblMateEmbal{
+			padding-left:1em;
+		}
+		.tbBtn{
+			padding-top:1.2em;
+			width:316px;
+		}
+		.btnVolverRC, .btnAñadir, .btnBorrar, .btnGuardar{
+			height:30px;
+		}
+		.btnVolverRC{
+			width:6.1em;
+			padding-left: 26px;
+			padding-right: 5px;			
+		}
+		.btnAñadir{
+			width:6.5em;
+			padding-left: 26px;
+			padding-right: 5px;
+		}
+		.btnBorrar{
+			width:6.5em;
+			padding-left: 26px;
+			padding-right: 5px;	
+		}
+		.btnGuardar{
+			width:7em;
+			padding-left: 26px;
+			padding-right: 5px;
+		}
+		.lblText{
+			font-family:Arial;
+			color:#404040;
+			font-size:0.8em;
+		}
+		.lblTools{
+			font-family:Arial;
+			color:#404040;
+			font-size:0.97em;
+		}
+		.lblAdminTitel{
+			color:#404040;
+			font-size:1.3em;
+			font-weight:bold;
+			text-align:center;
+		}
+		.lblAdminDescrip{
+			color:#404040;
+			font-size:1.05em;
+		}
+		.dTitlol{
+			width:100%;
+			text-align:center;
+			margin-left:-0.85em;
+		}
+			/* Tabla de administración */
+			.dAdmin {
+				position:fixed;
+				left:2.5%;
+                right:2.5%;
+                bottom:2.5%;
+                top:4.19em;
+				/*margin-top:0.2em;*/
+				overflow-y:scroll;
+				overflow-x:hidden;
+				border-radius: 4px;
+				/* z-index:1; */
+			}
+			.tbLoc {
+				width: 100%;
+				color: #333;
+				font-family: sans-serif;
+				font-size: 0.9em;
+				border-spacing: 0;
+				/*border-bottom: 1px solid #bfbfbf;*/
+				/*border-left: 1px solid #24A3C8;
+				border-right:1px solid #24A3C8;*/
+			}
+			/*.dAdmin table tr:first-child {
+				background: -webkit-linear-gradient(#50C0D7, #24A3C8);
+				background: -moz-linear-gradient(#50C0D7, #24A3C8);
+				background: -ms-linear-gradient(#50C0D7, #24A3C8);
+				background: -o-linear-gradient(#50C0D7, #24A3C8);
+				background: linear-gradient(#50C0D7, #24A3C8);
+				color: #ffffff;
+				border: none;
+				font-family:Arial;
+				font-size: 0.95em;
+				line-height:25px;
+			}*/
+			.tbLoc tr th {font-weight: bold;}
+			.tbLoc tr th:first-child, .dAdmin tr td:first-child{
+				text-align:left;
+			}
+			.tbLoc tbody tr:hover {background-color: #F1F1F1;}
+			.tbLoc tbody tr:last-child td {border: none;}
+			.trAdmin {
+				border-bottom: 1px solid #bfbfbf;
+				padding-top:0.5em;
+				padding-bottom:0.5em;
+			}
+			.tbLoc td table {
+				border:none !important;
+			}
+			.tbLoc td table tr {
+				background:none !important;
+			}
+			.tbDescrip{
+				width:100%;
+				border-spacing:0;
+			}
+			.tbDescrip tr td:first-child {
+				text-align:left !important;
+			}
+			.tbDescrip tr td{
+				text-align:center !important;
+				width:50% !important;
+			}
+			.tbLoc tr:nth-child(even) {
+			  background-color: #F2F9FD;
+			}
+			.tbLoc tr:nth-child(odd) {
+			  background-color: #fff;
+			}
+			.tdSel{
+				padding:4px 0 4px 0 !important;
+				width:1.9em !important;
+			}
+			.chbox{
+				margin-left:0.5em;
+			}
+			.lblContent{
+				color: #404040;
+				font-family:Arial;
+				font-size: 0.77em;
+			}
+			/* \Tabla de administración */
+			
+		.tbAnaReg{
+			width:100%;
+			padding-top:1.2em;
+		}
+		.btnCancelar, .btnAceptar{
+			height:30px;
+		}
+		.btnCancelar {
+			width:6.8em;
+			padding-left: 26px;
+			padding-right: 5px;	
+		}
+		.btnAceptar {
+			width:6.5em;
+			padding-left: 26px;
+			padding-right: 5px;	
+		}
+		.lblAnaReg{
+			color: #404040;
+			font-family:Arial;
+			font-size: 0.9em;
+		}
+				
+		.txtPedido, .txtPos, .txtMaterial, .txtCantidad, 
+		.txtLote, .txtLotProv, .txtFecProd, .txtTipProc{
+			width: 17em;
+		}
+		.tbContenido{
+			padding-top:0.2em;
+			width:100%;
+		}
+		.tbContenido tr td{
+			padding-top:0.75em;
+			width:100%;
+			text-align:center;	
+		}
+		.dList{
+		    visibility:hidden;
+		    position:fixed;
+		    top:0;
+		    bottom:0;
+		    width:100%;
+		    right:-100%;
+            background:#FFF;
+		    transition:0.3s ease-in-out;
+		    z-index:99;
+		}
+		.dCancelar{
+		    position:fixed;
+        	top:1.5%;
+        	left:2%;
+		}
+		.bodyList{
+		    position:fixed;
+		    top:8.5%;
+		    bottom:0.5%;
+		    right:0.5%;
+		    left:0.5%;
+		    overflow-x:hidden;
+            overflow-y:hidden;
+            background: rgba(225,225,225,.45);
+            border:1px solid rgba(34,34,34,.45);
+            -webkit-border-radius:6px;
+            -moz-border-radius:6px;
+            -ms-border-radius:6px;
+            -o-border-radius:6px;
+            border-radius:6px;
+		}
+
+			
+		/************ \Pagina de Recepción de Compras *************/
+		/************ Pagina de Devoluciones *************/
+		.dFil2 {
+			height:12.23em;
+			width:99.7% !important;
+			border-bottom:1px solid #BFBFBF;
+		}	
+		.tbPrimer{
+			float:right;
+			width:60%;
+			padding-top:0.8em;
+			padding-right:0.35em;
+		}
+		.btnSelecItem, .btnSMGuardar, .btnBuscar {
+			height:30px;
+		}
+		.btnSelecItem{
+			width:10.6em;
+			padding-left: 26px;
+			padding-right: 5px;
+		}
+		.btnSMGuardar{
+			width:8.6em;
+			padding-left: 26px;
+			padding-right: 5px;
+		}
+		.btnBuscar{
+			width:6.9em !important;
+			padding-left: 26px;
+			padding-right: 5px;
+		}
+		.txtPedido2{
+			width: 11em !important;
+		}
+		.lblCLMov, .lblPedido2, .lblCentro1, .lblAlmacen{
+			padding-left:1.9em;
+		}
+		.tbCampos2{
+			padding-top:0.2em;
+			padding-left:2.7em;
+			width:100%;
+		}
+		.tbCampos2 tr td {
+			padding-top:0.45em;
+		}
+		.tbCampos2 tr td input{
+			width:18.05em;
+		}
+		.dTools2{
+			visibility:hidden;
+			position:absolute;
+			margin-left:8em;
+			margin-top:0.3em;
+			width:10.25em;
+			height:4.6em;
+			background:#FFF;
+			border-radius:4px;
+			border:0.1em solid #BFBFBF;
+			box-shadow:3px 3px 3px #BFBFBF;
+		}
+		.dTools2 table{
+			border-spacing: 0;
+			border: none;
+			padding-top:0.38em;
+			padding-bottom:0.38em;
+		}
+		.dTools2 tr:hover{
+			background:#E8E8E8;
+		}
+		.dTools2 tr td{
+			border: none;
+			padding-top:0.4em;
+			padding-bottom:0.4em;
+		}
+		.dTools2 tr td:first-child{
+			padding-left:0.5em;
+		}
+		.tdItem{
+			padding-left:0.6em;	
+		}
+		/************ \Pagina de Devoluciones *************/
+		
+	/************ \Pagina de Recepción *************/
+	/************ Pagina de Almacenamiento *************/
+	
+		/************ Pagina de Traslados de Almacén *************/
+
+		.tbAdicionar{
+		    width:94%;
+		}
+		.tbAdicionar > tr:first-child > td {
+		    padding-left:0.5em;
+		}
+
+        .dFil9 {
+   			height:4.7em;
+			width:99.7% !important;
+			/*border-bottom:1px solid #BFBFBF;*/
+		}
+        .dFil10 {
+   			height:8.95 em;
+			width:99.7% !important;
+			/*border-bottom:1px solid #BFBFBF;*/
+		}
+		.txtDat3{
+			width:17.5em !important;
+		}
+		.btnAnadirAL, .btnGuardarAL{
+			height:30px;
+		}
+		.btnAnadirAL{
+			width:6.2em;
+			padding-left: 26px;
+			padding-right: 5px;
+		}
+		.btnGuardarAL{
+			width:6.8em;
+			padding-left: 26px;
+			padding-right: 4px;
+		}
+		.tbPrimeTA{
+			float:right;
+			width:60%;
+			padding-top:0.8em;
+		}
+		.tbCampos3{
+			padding-top:0.15em;
+			width:100%;
+		}
+		.tbCampos3 tr td {
+			padding-top:0.3em;
+		}
+		.tbCampos3 input{
+			width:12.5em;
+		}
+		.dTools3{
+			visibility:hidden;
+			position:absolute;
+			margin-left:9.9em;
+			margin-top:0.3em;
+			width:8.43em;
+			height:4.6em;
+			background:#FFF;
+			border-radius:4px;
+			border:0.1em solid #BFBFBF;
+			box-shadow:3px 3px 3px #BFBFBF;
+		}
+		.dTools3 table{
+			border-spacing: 0;
+			border: none;
+			padding-top:0.38em;
+			padding-bottom:0.38em;
+		}
+		.dTools3 tr:hover{
+			background:#E8E8E8;
+		}
+		.dTools3 tr td{
+			border: none;
+			padding-top:0.4em;
+			padding-bottom:0.4em;
+		}
+		.dTools3 tr td:first-child{
+			padding-left:0.5em;
+		}
+		.tdItem{
+			padding-left:0.6em;	
+		}
+		
+		/************ \Pagina de Traslados de Almacén *************/
+		/************ Pagina de Traslados de Ubicaciones ************/
+
+		.txtPabellonUB,
+        .txtPasilloUB,
+        .txtFilaUB,
+        .txtColumnaUB{
+
+            text-align:center;
+            color:#404040;
+            font-size:1.03em;
+        }
+
+        .txta:disabled{
+            background:#F0F0F0;
+        }
+
+		.tbCampos4{
+			padding-top:0.7em;
+			width:100%;
+		}
+		.tbCampos4 tr td {
+			padding-top:0.95em;
+		}
+		.dTools4{
+			visibility:hidden;
+			position:absolute;
+			margin-left:11.75em;
+			margin-top:0.3em;
+			width:6.5em;
+			height:2.67em;
+			background:#FFF;
+			border-radius:4px;
+			border:0.1em solid #BFBFBF;
+			box-shadow:3px 3px 3px #BFBFBF;
+		}
+		.dTools4 table{
+			border-spacing: 0;
+			border: none;
+			padding-top:0.38em;
+			padding-bottom:0.38em;
+		}
+		.dTools4 tr:hover{
+			background:#E8E8E8;
+		}
+		.dTools4 tr td{
+			border: none;
+			padding-top:0.4em;
+			padding-bottom:0.4em;
+		}
+		.dTools4 tr td:first-child{
+			padding-left:0.5em;
+		}
+		.tdItem{
+			padding-left:0.6em;	
+		}
+		.txtUMPUB{
+			width: 15.1em !important;
+		}
+		.txtCentroUB{
+			width:22.2em !important;	
+		}
+		.txtPabellonUB, .txtPasilloUB, .txtFilaUB, .txtColumnaUB {
+			width:15.5em !important;
+		}
+		.btnCancelarUB, .btnGuardarUB{
+		    height:30px;
+		}
+		.btnCancelarUB{
+		    width:7em;
+            padding-left: 26px;
+            padding-right: 5px;
+		}
+		.btnGuardarUB{
+		    width:7em;
+            padding-left: 26px;
+            padding-right: 5px;
+		}
+		
+		/************ \Pagina de Traslados de Ubicaciones ************/
+		/************ Pagina de Creación de UMP ************/
+		.dFil4 {
+			height:9.65em;
+			width:100% !important;
+			border-bottom:1px solid #BFBFBF;
+		}
+		.tbCampos5{
+			padding-top:0.25em;
+			width:100%;
+		}
+		.tbCampos5 tr td {
+			text-align:center;
+			padding-top:0.4em;
+		}
+		.txtDat4{
+			width: 17.5em;
+		}
+		.lblCentroCUMP, .lblMatEmbalCUMP, .lblAlmacenCUMP, .lblUnidManipCUMP {
+			padding-left:2.1em;
+		}
+		/************ \Pagina de Creación de UMP ************/
+		/************ Pagina de Visualizar de UMP ************/
+		.dFil5 {
+			height:7.5em;
+			width:100% !important;
+			border-bottom:1px solid #BFBFBF;
+		}
+		.dTools5{
+			visibility:hidden;
+			position:absolute;
+			margin-left:6.9em;
+			margin-top:0.3em;
+			width:11.38em;
+			height:4.6em;
+			background:#FFF;
+			border-radius:4px;
+			border:0.1em solid #BFBFBF;
+			box-shadow:3px 3px 3px #BFBFBF;
+		}
+		.dTools5 table{
+			border-spacing: 0;
+			border: none;
+			padding-top:0.38em;
+			padding-bottom:0.38em;
+		}
+		.dTools5 tr:hover{
+			background:#E8E8E8;
+		}
+		.dTools5 tr td{
+			border: none;
+			padding-top:0.4em;
+			padding-bottom:0.4em;
+		}
+		.dTools5 tr td:first-child{
+			padding-left:0.5em;
+		}
+		.tdItem{
+			padding-left:0.6em;	
+		}
+		/************ \Pagina de Visualizar de UMP ************/
+		/************ Pagina de Fraccionamiento de UMP ************/
+		
+		.dTools6{
+			visibility:hidden;
+			position:absolute;
+			margin-left:9.54em;
+			margin-top:0.3em;
+			width:8.75em;
+			height:6.5em;
+			background:#FFF;
+			border-radius:4px;
+			border:0.1em solid #BFBFBF;
+			box-shadow:3px 3px 3px #BFBFBF;
+		}
+		.dTools6 table{
+			border-spacing: 0;
+			border: none;
+			padding-top:0.38em;
+			padding-bottom:0.38em;
+		}
+		.dTools6 tr:hover{
+			background:#E8E8E8;
+		}
+		.dTools6 tr td{
+			border: none;
+			padding-top:0.4em;
+			padding-bottom:0.4em;
+		}
+		.dTools6 tr td:first-child{
+			padding-left:0.5em;
+		}
+		.tdItem{
+			padding-left:0.6em;	
+		}	
+		/************ \Pagina de Fraccionamiento de UMP ************/
+	
+	/************ \Pagina de Almacenamientor *************/
+	/************ Pagina de Despacho *************/
+	
+		/************ Pagina de Despacho de Ventas ************/
+		.dFil6 {
+			height:6.8em;
+			width:99.7% !important;
+			border-bottom:1px solid #BFBFBF;
+		}
+		.tbCampos6{
+			padding-top:0.2em;
+			width:100%;
+		}
+		.tbCampos6 tr td {
+			padding-top:0.3em;
+			text-align:center;
+		}
+		.tbCampos6 tr td input{
+			width:16.8em;
+		}
+		.lblCentroDistri, .lblEntrega{
+			padding-left:1.5em;
+		}
+		.dTools7{
+			visibility:hidden;
+			position:absolute;
+			margin-left:8.1em;
+			margin-top:0.3em;
+			width:10.2em;
+			height:8.45em;
+			background:#FFF;
+			border-radius:4px;
+			border:0.1em solid #BFBFBF;
+			box-shadow:3px 3px 3px #BFBFBF;
+		}
+		.dTools7 table{
+			border-spacing: 0;
+			border: none;
+			padding-top:0.38em;
+			padding-bottom:0.38em;
+		}
+		.dTools7 tr:hover{
+			background:#E8E8E8;
+		}
+		.dTools7 tr td{
+			border: none;
+			padding-top:0.4em;
+			padding-bottom:0.4em;
+		}
+		.dTools7 tr td:first-child{
+			padding-left:0.5em;
+		}
+		.tdItem{
+			padding-left:0.6em;	
+		}
+		/************ \Pagina de Despacho de Ventas ************/
+		/************ Pagina de Despacho de Traslado ************/
+		
+		.lblCLMovDES, .lblUMPDES, .lblCenOrigenDES, .lblAlmacOrigenDES, .lblCenDestDES, .lblAlmacDestDES 	{
+			padding-left:1.7em;
+		}
+		.dFil7 {
+			height:15.7em;
+			width:19.6em;
+			border-bottom:1px solid #BFBFBF;
+		}
+		.tbCampos7{
+			padding-top:0.45em;
+			padding-bottom:1em;
+			width:100%;
+		}
+		.tbCampos7 tr td {
+			padding-top:0.3em;
+		}
+		.tbCampos7 tr td input{
+			width:12em;
+		}
+		/************ \Pagina de Despacho de Traslado ************/
+		/************ Pagina de Despacho de Reserva ************/
+		
+		.alias{
+			padding-left:0.62em;
+			padding-top:0.35em;
+		}
+		.dFil8 {
+			height:12.5em;
+			width:19.6em;
+			border-bottom:1px solid #BFBFBF;
+		}
+		
+		/************ \Pagina de Despacho de Reserva ************/
+	
+	/************ \Pagina de Depacho *************/
+	/************ Pagina de Toma de Inventario *************/
+	
+		/************ Pagina de Conteo de Inventario ************/
+		.dTools8{
+			visibility:hidden;
+			position:absolute;
+			margin-left:2.2em;
+			margin-top:0.3em;
+			width:16.15em;
+			height:4.6em;
+			background:#FFF;
+			border-radius:4px;
+			border:0.1em solid #BFBFBF;
+			box-shadow:3px 3px 3px #BFBFBF;
+		}
+		.dTools8 table{
+			border-spacing: 0;
+			border: none;
+			padding-top:0.38em;
+			padding-bottom:0.38em;
+		}
+		.dTools8 tr:hover{
+			background:#E8E8E8;
+		}
+		.dTools8 tr td{
+			border: none;
+			padding-top:0.4em;
+			padding-bottom:0.4em;
+		}
+		.dTools8 tr td:first-child{
+			padding-left:0.5em;
+		}
+		.tdItem{
+			padding-left:0.6em;	
+		}
+		/************ \Pagina de Conteo de Inventario ************/
+		/************ Pagina de Reconteo de Inventario ************/
+		
+		.txtDat5{
+			width: 18.3em;
+		}
+		.btnPalletaSaldo, .btnPalletaCompleto {
+			height:30px;
+		}
+		.btnPalletaSaldo{
+			width:9.2em !important;
+			padding-left: 26px;
+			padding-right: 5px;
+		}
+		.btnPalletaCompleto{
+			width:10.8em !important;
+			padding-left: 26px;
+			padding-right: 5px;
+		}
+		
+		/************ \Pagina de Reconteo de Inventario ***********/
+	
+	/************ \Pagina de Toma de Inventario *************/
+
+
+	  /* SCROLLBAR CSS3 */
+                ::-webkit-scrollbar{
+                width: 0px;
+                background: #FFF;
+                }
+                ::-webkit-scrollbar-button{
+                width: 0px;
+                height:0px;
+                }
+                ::-webkit-scrollbar-track{
+                background:#FFF;
+                border:thin solid #FFF;
+                -webkit-box-shadow: inset 0 0 6px #FFF;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                }
+                ::-webkit-scrollbar-thumb{
+                background:-webkit-linear-gradient(#E4E4E4, #C1C1C1);
+                background:-moz-linear-gradient(#E4E4E4, #C1C1C1);
+                background:-ms-linear-gradient(#E4E4E4, #C1C1C1);
+                background:-o-linear-gradient(#E4E4E4, #C1C1C1);
+                background:linear-gradient(#E4E4E4, #C1C1C1);
+                -webkit-box-shadow:   inset 0 0 0 rgba(255,255,225,.5),
+                inset 0 0 0 rgba(255,255,255,.4),
+                inset 0 0 0 rgba(255,255,255,.3) ;
+                border:0.01px solid #FFF;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                }
+                ::-webkit-scrollbar-thumb:hover{
+                background:-webkit-linear-gradient(#E4E4E4, #C1C1C1);
+                background:-moz-linear-gradient(#E4E4E4, #C1C1C1);
+                background:-ms-linear-gradient(#E4E4E4, #C1C1C1);
+                background:-o-linear-gradient(#E4E4E4, #C1C1C1);
+                background:linear-gradient(#E4E4E4, #C1C1C1);
+                }
+
+                ::-webkit-scrollbar-thumb:window-inactive {
+                background:-webkit-linear-gradient(rgba(228,228,228,.6), rgba(193,193,193,.6));
+                background:-moz-linear-gradient(rgba(228,228,228,.6), rgba(193,193,193,.6));
+                background:-ms-linear-gradient(rgba(228,228,228,.6), rgba(193,193,193,.6));
+                background:-o-linear-gradient(rgba(228,228,228,.6), rgba(193,193,193,.6));
+                background:linear-gradient(rgba(228,228,228,.6), rgba(193,193,193,.6));
+                }
+
+                .lblHUDescrip{
+                color:#404040;
+                font-size:1.05em;
+                margin-left:8em;
+                text-align:center;
+                padding-top:1.2em;
+                }
